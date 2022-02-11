@@ -1,0 +1,90 @@
+<div id="main">
+  <div id="bg" class="bg-wrap-title d-flex flex-wrap my-3">
+    <h1 class="title mr-auto">PURCHASE</h1>
+  </div>
+
+  <div class="cards-container">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-10 col-12">
+          <div class="row bs-wizard">
+            <div class="col-xl-3 col-4 bs-wizard-step text-center  active">
+              <div class="bs-wizard-stepnum">
+                Purchased
+              </div>
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+              <div class="bs-wizard-dot d-flex align-items-center justify-content-center">
+                <i class="fas fa-check"></i>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-4 bs-wizard-step text-center ">
+              <div class=" bs-wizard-stepnum">
+                Registered
+              </div>
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+              <div class="bs-wizard-dot d-flex align-items-center justify-content-center ml-check">
+                <i class="dot-step"></i>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-4 bs-wizard-step text-center ">
+              <div class=" bs-wizard-stepnum">
+                Active
+              </div>
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+              <div class="bs-wizard-dot d-flex align-items-center justify-content-center ml-check1">
+                <i class="dot-step"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="mt-18">
+        <div class="form-group register-domain">
+          <label class="mb-8">Domain</label>
+          <div class="input-group input-inline d-flex">
+            <div class="input-group-prepend">
+              <span class="input-group-text input-addon" id="">WWW</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+            <select class="custom-select input-addon select-domain " id="inputGroupSelect01">
+              <option selected>.com</option>
+              <option value="1">.net</option>
+              <option value="2">.org</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <div class="block-alert ">
+        <div>
+          You will be charged an annual fee of $30 for your custom domain. This fee covers domain name registration, SSL
+          certificate creation, and other administrative fees.
+        </div>
+        <br>
+        <div>By creating a domain, you agree to our terms of service and certify that no content in this domain
+          infringes any third-party intellectual property rights.</div>
+      </div>
+
+      <div class="check-box-agree d-flex align-items-center word-break-all domain-check">
+        <input type="checkbox" class="mr-8" checked>
+        <label>
+          I agree with
+          <button class="terms-service" mat-button (click)="openDialog()">terms of service</button>
+          and certify that no content in this domain infringes any third-party intellectual property rights.
+        </label>
+      </div>
+
+      <div class="register-domain mt-20 btn-action">
+        <button class="btn btn-outline-grad-warning ng-star-inserted button-sub">REGISTER INFO</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,143 @@
+<form class="ng-untouched ng-pristine ng-invalid">
+  <div class="block-sessions">
+    <div class="title-sections">
+      General information
+    </div>
+    <div class="block-input">
+      <label class="title-input">
+        Website name
+        <span class="input-required">*</span>
+      </label>
+      <input type="text" class="form-control ng-untouched ng-pristine ng-invalid" name="site_name" required>
+      <div class="sub-noti">
+        You'll register your domain name at the next step
+      </div>
+    </div>
+    <div class="block-input">
+      <label class="title-input">
+        Office address
+      </label>
+      <input type="text" class="form-control ng-untouched ng-pristine ng-invalid" name="site_name" required>
+    </div>
+  </div>
+
+  <div class="block-sessions">
+    <div class="title-sections">
+      Custom Navigation (optional)
+    </div>
+    <div class="row m-0">
+      <div class="col-xl-7 col-md-8 col-12 custom-navigate">
+        <div class="row menu-choose-tags">
+          <div class="col-6 list-menu">
+            <ng-select  class="custom" [items]="domainsList" [addTag]="true" [multiple]="true" [closeOnSelect]="false"
+                placeholder="Corresponding sub-category" [searchable]="true" bindLabel="" [(ngModel)]="selectedDomains">
+              </ng-select>
+
+          </div>
+          <div class="col-6 list-menu">
+            <div class="selector-tags">
+              <ng-select  class="custom" [items]="domainsList" [addTag]="true" [multiple]="true" [closeOnSelect]="false"
+                placeholder="Corresponding sub-category" [searchable]="true" bindLabel="" [(ngModel)]="selectedDomains">
+              </ng-select>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block-sessions mb-30">
+    <div class="title-sections">
+      Social media
+    </div>
+    <div>
+      <label for="basic-url" class="title-input">Facebook Url
+        <span class="sub-title-input">(optional)</span>
+      </label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon3">facebook.com</span>
+        </div>
+        <input type="text" class="form-control height-40" id="basic-url" aria-describedby="basic-addon3">
+      </div>
+    </div>
+
+    <div>
+      <label for="basic-url" class="title-input">Twitter URL
+        <span class="sub-title-input">(optional)</span>
+      </label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon3">twitter.com</span>
+        </div>
+        <input type="text" class="form-control height-40" id="basic-url" aria-describedby="basic-addon3">
+      </div>
+    </div>
+
+    <div>
+      <label for="basic-url" class="title-input">Instagram URL
+        <span class="sub-title-input">(optional)</span>
+      </label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon3">instagram.com</span>
+        </div>
+        <input type="text" class="form-control height-40" id="basic-url" aria-describedby="basic-addon3">
+      </div>
+    </div>
+
+    <div class="banner-img">
+      <label for="basic-url" class="title-input">Banner image
+        <i class="ti-help-alt" aria-hidden="true" placement="top"
+          tooltip="Recommended dimensions: 1128 pixels (width) by 512 pixels (height)."></i>
+      </label>
+      <label for="upload-banner" class="upload-file-input width-100 mx-0 text-center d-block">
+        <div class="upload-img">
+          <div class="width-100">
+            <img src="https://prov2.30usd.com/assets/images/upload_image.png">
+          </div>
+          <span>Upload image</span>
+
+        </div>
+      </label>
+      <input type="file" id="upload-banner" class="upload-banner" name="upload-banner">
+      <div class="sub-noti">
+        Banner image on your landing page
+      </div>
+    </div>
+
+    <div class="block-input input-group d-block">
+      <label for="basic-url" class="title-input">Banner image
+        <i class="ti-help-alt" aria-hidden="true" placement="top"
+          tooltip="Recommended dimensions: 1128 pixels (width) by 512 pixels (height)."></i>
+      </label>
+      <label for="upload-logo" class="upload-file-input width-100 mx-0 text-center d-block width-px">
+        <img src="https://prov2.30usd.com/assets/images/upload_logo.png" alt="">
+      </label>
+      <input type="file" id="upload-logo" class="upload-banner" name="upload-banner">
+      <div class="sub-noti">
+        Logo of the your website
+      </div>
+    </div>
+
+    <div class="block-sessions mt-142">
+      <div class="title-sections">
+        Highlight color
+      </div>
+      <div class="form-radio">
+        <div class="item ng-star-inserted" *ngFor="let item of colorList; let i=index" (click)="chooseColor(i)">
+          <label [style.background]="item.color" class="circle-radio">
+            <i class="fa fa-check d-block icon-check" *ngIf="selectedIndex === i"></i>
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="btn-action justify-content-between ">
+    <button class="btn btn-outline-grad-warning btn-register shadow ng-star-inserted" type="button" disabled>
+      SAVE CHANGE
+    </button>
+  </div>
+</form>

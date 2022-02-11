@@ -1,0 +1,106 @@
+<div id="main">
+  <div id="bg">
+    <p class="d-flex justify-content-between">
+      <span style="font-size: 26px; font-weight: 500;">ADD STOREFRONTS</span>
+    </p>
+  </div>
+  <div class="cards-container">
+    <div class="card-body">
+
+      <div class="container">
+        <form class="ng-touched ng-dirty ng-valid">
+          <div class="mb-4">
+            <div class="d-flex">
+              <label class="form-label">Title</label>
+              <span class="text-danger ms-1">*</span>
+            </div>
+            <input class="form-control mb-2 ng-pristine ng-valid ng-touched " formcontrolname="title" maxlength="50"
+              type="text">
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Description</label>
+            <div class="edit-text">
+              <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+              <div class="html">
+                {{ htmlContent }}
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mb-4">
+            <div class="d-flex">
+              <label class="form-label">Url</label>
+              <span class="text-danger ms-1">*</span>
+            </div>
+            <div class="input-group mb-3">
+              <select class="form-select height" id="inputGroupSelect02">
+                <option selected>30usd.com</option>
+              </select>
+              <input type="text" class="form-control height" for="inputGroupSelect02">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="d-flex">
+              <label class="form-label">Facebook pixel for this storefront</label>
+            </div>
+            <input class="form-control mb-2 ng-pristine ng-valid ng-touched" type="text">
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label">Banner
+              <span class="text-secondary font-size-14">(Displayed on the custom domain homepage)</span>
+              <i class="ti-info-alt"></i>
+            </label>
+            <div class="img-table">
+              <label>
+                <input #Image type="file" (change)="handleFileInput($event.target.files)" class="input-img" />
+              </label>
+              <img *ngIf="imageUrl" [src]="imageUrl" class="image">
+            </div>
+          </div>
+
+          <div class="mb-4 button-add">
+            <label class="form-label">Campaign</label>
+            <button class="btn modal-sm mr-2" type="button">
+              ADD CAMPAIGN
+            </button>
+          </div>
+
+          <div class="mb-4 ">
+            <div class="form-check-inline mr-5 mg-r-42">
+              <label class="form-check-label d-flex align-items-center cursor-pointer">
+                <input class="form-check-input mr-3 cursor-pointer input-radio" type="radio" name="otpradio">
+                <span class="mt-1">Public</span>
+              </label>
+            </div>
+            <div class="form-check-inline mr-5 mg-r-42">
+              <label class="form-check-label d-flex align-items-center cursor-pointer">
+                <input class="form-check-input mr-3 cursor-pointer input-radio" type="radio" name="otpradio">
+                <span class="mt-1">Private</span>
+              </label>
+            </div>
+            <div class="form-check-inline mr-5 mg-r-42">
+              <ui-switch uncheckedLabel="Inactive" checkedLabel="Active" [checked]="true"></ui-switch>
+            </div>
+          </div>
+
+          <div class="flex-wrap">
+            <button class="btn-submit mr-4 mr-21" type="submit">
+              UPDATE STOREFRONT
+            </button>
+            <button class="btn-cancel btn-outline-burger" type="button">
+              CANCEL
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</div>

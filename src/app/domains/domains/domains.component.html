@@ -1,0 +1,56 @@
+<div id="main">
+  <div id="bg" class="bg-wrap-title d-flex flex-wrap my-3">
+    <h1 class="title mr-auto">ALL DOMAINS</h1>
+    <div class="actions-box" routerLink="creat">
+      <a class="btn btn-grad-warning shadow">
+        CREATE NEW DOMAIN
+      </a>
+    </div>
+  </div>
+
+  <div class="cards-container">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Domain Name</th>
+              <th scope="col">URL</th>
+              <th scope="col">Registration date </th>
+              <th scope="col">Expiration Date </th>
+              <th scope="col">Status</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of pagedDestinations">
+              <td>{{ data.site_name }}</td>
+              <td>
+                <a class="link-href" href="http://{{ data.name }}">{{ data.name }}</a>
+              </td>
+              <td>{{ data.register_date | date }}</td>
+              <td>{{ data.register_date | date }}</td>
+              <td class="d-flex justify-content-center">
+                <a role="button"
+                  class="btn domain-status d-flex align-items-center justify-content-center btn-grad-success ng-star-inserted btn-grad-warning"
+                  routerLink="register">{{ data.state }}</a>
+              </td>
+              <td>
+                <div class="d-flex align-items-center" routerLink="details" >
+                  <a class="btn btn-action d-flex align-items-center justify-content-center shadow"
+                    tooltip="View options" placement="top">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="pagination-1">
+      <kendo-datapager [style.width.%]="100" [pageSize]="pageSize" [skip]="skip" [total]="total"
+        [pageSizeValues]="pageSizes" (pageChange)="onPageChange($event)">
+      </kendo-datapager>
+    </div>
+  </div>

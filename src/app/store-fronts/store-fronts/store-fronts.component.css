@@ -1,0 +1,131 @@
+#main {
+  background-color: #e5e5e5;
+  height: auto;
+  padding: 30px 30px 7rem;
+}
+.cards-container {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  height: auto;
+}
+#bg {
+  font-size: 16px;
+  /* padding: 30px; */
+  background-color: #e5e5e5;
+}
+.paging-custom {
+  padding: 0 30px 5px;
+}
+.select1 ::ng-deep .ng-value-container {
+  border-top-width: 1px !important;
+  padding-left: 10px !important;
+  padding-top: 8px !important;
+  color: gray;
+  padding-right: 10px;
+}
+.select1 ::ng-deep .ng-select-container {
+  min-height: 39.5px !important;
+  padding-bottom: 8px !important;
+  width: 150px;
+  border-bottom: 0 solid #fff;
+}
+.select1 ::ng-deep .ng-dropdown-panel.ng-select-bottom {
+  top: calc(100% - -0.2em);
+  width: 175px;
+}
+.select1 ::ng-deep .ng-arrow-wrapper {
+  align-self: flex-end;
+  bottom: 0 !important;
+}
+.cards-top {
+  padding: 15px 15px 5px;
+}
+.magin-r-40 {
+  margin-right: 40px !important;
+}
+.search-everything {
+  height: 40px;
+  border-radius: 4px 0 0 4px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  min-width: 120px;
+}
+.button-icon {
+  height: 40px;
+  width: 50px;
+  border-radius: 0 4px 4px 0;
+  background-color: #ef911b;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+.btn-burger {
+  color: #fff;
+  background-color: #ef911b;
+  border-color: #ef911b;
+  width: 112px;
+}
+.btn {
+  line-height: 20px;
+  padding: 8px 12px;
+  letter-spacing: 0.5px;
+  height: 40px;
+  border-radius: 5px;
+}
+.button-add {
+  position: relative;
+}
+.button-sup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 15px;
+}
+.table-main {
+  padding: 15px;
+}
+thead {
+  border-top: 1px solid #dee2e6 !important;
+}
+tbody {
+  border-top: none !important;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  height: 46px;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-style: none;
+}
+
+.input-group {
+  flex-wrap: initial;
+}
+.k-pager-wrap {
+  border-color: rgba(0, 0, 0, 0) !important;
+  color: #424242;
+  background-color: #fff !important ;
+}
+
+.button-action {
+  height: 28px;
+  width: 28px;
+  border-radius: 3px;
+  background: #fff !important ;
+  border: none;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 20%);
+}
+.ml-3 {
+  margin-left: 16px;
+}

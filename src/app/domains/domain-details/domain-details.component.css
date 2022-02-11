@@ -1,0 +1,36 @@
+#main {
+  background-color: #e5e5e5;
+  height: auto;
+  padding: 30px 30px 7rem;
+}
+.cards-container {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  height: auto;
+}
+#bg {
+  font-size: 16px;
+  background-color: #e5e5e5;
+  position: relative;
+}
+.bg-wrap-title .title {
+  font-size: 24px;
+  font-weight: 600;
+  word-break: keep-all;
+}
+.domain-details {
+  border: none;
+  padding: 0;
+  color: #666;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+a:hover{
+  text-decoration: none;
+}
+.tab-content {
+  padding-top: 20px;
+}
