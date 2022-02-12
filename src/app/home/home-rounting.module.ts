@@ -7,6 +7,10 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
+        path: "",
+        redirectTo: '/platform/dashboard', pathMatch: 'full'
+       },
+      {
         path: "platform",
         loadChildren: () =>
           import("../platform/platform.module").then((m) => m.PlatformModule),

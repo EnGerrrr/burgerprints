@@ -83,24 +83,8 @@ export class DomainDetailsSupComponent implements OnInit {
 
   constructor() {}
 
-  domains = [
-    { id: 1, name: "All Domains" },
-    { id: 2, name: "trangthanh.com" },
-    { id: 3, name: "trabg.com" },
-    { id: 4, name: "trangthanh2111.com" },
-    { id: 5, name: "burgerprints.vn" },
-    { id: 6, name: "30usd.com" },
-  ];
-  status = [
-    { id: 1, name: "Status" },
-    { id: 2, name: "Active" },
-    { id: 3, name: "Inactive" },
-  ];
-
-  selecteddomain = this.domains[0].name;
-  selectedstatus = this.status[0].name;
-
   ngOnInit() {}
+
   chooseColor(index: number) {
     this.selectedIndex = index;
   }

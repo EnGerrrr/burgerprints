@@ -933,11 +933,24 @@ button:focus {
 .ng-select.custom .ng-placeholder {
   top: 0 !important;
   padding-top: 6px;
+  padding-left: 12px;
  }
  .ng-select .ng-select-container {
    min-height: 40px !important;
    height: 40px;
+   align-items: none;
  }
+.ng-select .ng-select-container .ng-value-container {
+  border-top: 0.24375em solid transparent;
+}
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value {
+  padding-left: 8px;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected {
+  background-color: #ef911b;
+  color: #fff;
+}
+
 @keyframes lds-spinner {
 	0% {
 		opacity: 1;
