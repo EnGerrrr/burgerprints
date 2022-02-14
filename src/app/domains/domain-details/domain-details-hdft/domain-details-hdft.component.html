@@ -1,1 +1,40 @@
-<p>domain-details-hdft works!</p>
+<form class="mt-30">
+  <div class="block-sessions">
+    <div class="title-sections">
+      Headers and Footers
+    </div>
+    <div class="block-input">
+      <label class="title-input">
+        Scripts in Header &nbsp;
+      </label>
+      <span class="pull-right char text-secondary" form="charactersLeft1">( {{ 2000 - charactersLeft1.length }} characters left )</span>
+      <div class="input-field">
+        <textarea type="text" [(ngModel)]="charactersLeft1" name="charactersLeft1"  id="charactersLeft1" class="form-control mb-1"
+          maxlength="2000"></textarea>
+        <div class="sub-noti">
+          These scripts will be printed in the &lt;head&gt; section.
+        </div>
+      </div>
+    </div>
+
+    <div class="block-input">
+      <label class="title-input">
+        Scripts in Footer &nbsp;
+      </label>
+      <span class="pull-right char text-secondary" form="charactersLeft2">( {{ 2000 - charactersLeft2.length }} characters left )</span>
+      <div class="input-field">
+        <textarea type="text" [(ngModel)]="charactersLeft2" name="charactersLeft2"  id="charactersLeft2" class="form-control mb-1"
+          maxlength="2000"></textarea>
+        <div class="sub-noti">
+          These scripts will be printed above the &lt;/body&gt; tag.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-action justify-content-between ">
+    <button class="btn btn-outline-grad-warning btn-register shadow" type="button" >
+      SAVE CHANGE
+    </button>
+  </div>
+</form>

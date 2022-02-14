@@ -13,7 +13,7 @@ import {
 import { dataProfit } from "./data-profit";
 import { PageChangeEvent } from '@progress/kendo-angular-dropdowns/dist/es2015/common/models/page-change-event';
 
-
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 export type ChartOptions = {
@@ -138,7 +138,7 @@ export class ProfitComponent implements OnInit {
   selectedCar: string;
 
 
-  constructor() {
+  constructor( private spinner: NgxSpinnerService) {
 
     this.chartOptions = {
       series: [
@@ -216,5 +216,12 @@ export class ProfitComponent implements OnInit {
   }
 
 
+
+  showSpinner() {
+    this.spinner.show(undefined, { fullScreen: true });
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 800);
+  }
 
 }

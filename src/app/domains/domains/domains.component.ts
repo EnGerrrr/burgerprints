@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { PageChangeEvent } from "@progress/kendo-angular-pager";
+import { NgxSpinnerService } from "ngx-spinner";
 import { data } from "./dataDomains";
 
 @Component({
@@ -8,6 +9,8 @@ import { data } from "./dataDomains";
   styleUrls: ["./domains.component.css"],
 })
 export class DomainsComponent implements OnInit {
+
+
   valueChange = true;
 
   // Pagination
@@ -35,5 +38,12 @@ export class DomainsComponent implements OnInit {
     this.valueChange = value;
   }
 
-  constructor() {}
+  constructor(private spinner: NgxSpinnerService) {}
+
+  showSpinner() {
+    this.spinner.show(undefined, { fullScreen: true });
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 500);
+  }
 }

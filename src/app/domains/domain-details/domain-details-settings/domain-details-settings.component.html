@@ -1,1 +1,116 @@
-<p>domain-details-settings works!</p>
+<form class="form-custom">
+  <div>
+    <div class="title-sections">
+      General
+    </div>
+    <div class="d-flex">
+      <div class="block-input1">
+        <label class="title-input custom-switch">
+          Countdown Timer
+        </label>
+        <div class="sub-noti">
+          Show a countdown timer in detail page
+        </div>
+      </div>
+      <mat-slide-toggle [checked] = true class="slide-custom"></mat-slide-toggle>
+    </div>
+
+    <div class="d-flex">
+      <div class="block-input">
+        <label class="title-input custom-switch">
+          Show Compare Price
+        </label>
+        <div class="sub-noti">
+          Auto add a compare price next to real price in detail page
+        </div>
+      </div>
+      <mat-slide-toggle [checked] = true class="slide-custom"></mat-slide-toggle>
+    </div>
+
+    <div class="d-flex">
+      <div class="block-input">
+        <label class="title-input custom-switch">
+          Show Store Search Bar
+        </label>
+        <div class="sub-noti">
+          When active, the search bar will appear on the store page
+        </div>
+      </div>
+      <mat-slide-toggle [checked] = true  class="slide-custom"></mat-slide-toggle>
+    </div>
+  </div>
+
+
+
+  <div class="block-sessions mb-30">
+    <div class="title-sections">
+      Google Tracking
+    </div>
+    <div>
+      <label for="basic-url" class="title-input mb-12">Google Tag Manager</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control input-custom "  required>
+      </div>
+    </div>
+
+    <div>
+      <label for="basic-url" class="title-input mb-12">Google Analytics ID</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control input-custom " placeholder="UA - XXXXX - Y" required>
+      </div>
+    </div>
+
+    <div>
+      <label for="basic-url" class="title-input mb-12">Google Conversion Tracking</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control input-custom "  required>
+      </div>
+    </div>
+
+  </div>
+
+
+    <div class="block-sessions mb-30">
+      <div class="title-sections">
+        Google Site Verification
+      </div>
+
+      <div>
+        <label for="basic-url" class="title-input mb-12">Meta Content (&lt; meta name=google-site-verification content=your verification string &gt;) </label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control input-custom "  required>
+        </div>
+      </div>
+    </div>
+
+    <div class="block-sessions mb-30">
+      <div class="title-sections">
+        Facebook Tracking
+      </div>
+      <div>
+        <label for="basic-url" class="title-input mb-12">Facebook Pixel ID</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control input-custom ">
+        </div>
+      </div>
+    </div>
+
+    <div class="block-sessions mb-30">
+      <div class="title-sections">
+        Tiktok Tracking
+      </div>
+      <div>
+        <label for="basic-url" class="title-input mb-12">Tiktok Pixel ID</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control input-custom "  required>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="btn-action justify-content-between ">
+    <button class="btn btn-outline-grad-warning btn-register shadow" type="button" >
+      SAVE CHANGE
+    </button>
+  </div>
+</form>

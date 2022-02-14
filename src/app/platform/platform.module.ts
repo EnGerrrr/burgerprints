@@ -30,6 +30,7 @@ import { UiSwitchModule } from 'ngx-toggle-switch';
 import { FrontEditComponent } from "@/store-fronts/front-edit/front-edit.component";
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { CreatStoreComponent } from "@/store-fronts/creat-store/creat-store.component";
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { CreatStoreComponent } from "@/store-fronts/creat-store/creat-store.comp
     PagerModule,
     Ng2OrderModule,
     UiSwitchModule,
-    AngularEditorModule
+    AngularEditorModule,
+    NgxSpinnerModule
   ],
 })
 export class PlatformModule {}

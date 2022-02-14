@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PageChangeEvent } from '@progress/kendo-angular-dropdowns/dist/es2015/common/models/page-change-event';
 import { dataProducts } from './data-products';
-
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-top-products',
@@ -11,7 +11,7 @@ import { dataProducts } from './data-products';
 export class TopProductsComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private spinner: NgxSpinnerService) { }
 
 
 // Pagination
@@ -111,4 +111,12 @@ public hideColumn(columnName: string): void {
     this.reverse = !this.reverse;
   }
 
+
+
+  showSpinner() {
+    this.spinner.show(undefined, { fullScreen: true });
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 800);
+  }
 }

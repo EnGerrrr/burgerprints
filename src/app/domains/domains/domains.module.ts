@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+// import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { DomainsRountingModule } from "./domains-rounting.module";
 import { DomainsComponent } from "./domains.component";
@@ -19,9 +19,9 @@ import { DomainDetailsHdftComponent } from "../domain-details/domain-details-hdf
 import { DomainDetailsPromotionsComponent } from "../domain-details/domain-details-promotions/domain-details-promotions.component";
 import { DomainDetailsEmailsComponent } from "../domain-details/domain-details-emails/domain-details-emails.component";
 import { DomainDetailsGoogleComponent } from "../domain-details/domain-details-google/domain-details-google.component";
-
+import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgSelectModule } from '@ng-select/ng-select';
-// import { NgOptionHighlightModule } from '@ng-select/ng-option-highlight';
+import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     DomainsComponent,
@@ -46,11 +46,12 @@ import { NgSelectModule } from '@ng-select/ng-select';
     BsDropdownModule.forRoot(),
     TypeaheadModule.forRoot(),
     NgSelectModule,
-    // NgSelectModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule
   ],
   entryComponents: [
-    DialogContentExampleDialog
+    DialogContentExampleDialog,
+
   ],
   bootstrap: [DomainDetailsComponent]
 })

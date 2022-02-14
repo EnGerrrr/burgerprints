@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./domain-details-hdft.component.css']
 })
 export class DomainDetailsHdftComponent implements OnInit {
+  // myModel: string = undefined;
 
+  charactersLeft1: string='';
+  charactersLeft2: string='';
   constructor() { }
 
   ngOnInit() {

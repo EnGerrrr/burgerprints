@@ -2,28 +2,36 @@
   <div class="pt-2 pb-3">
     <ul class="nav nav-tabs pb-3 border-bottom-secondary">
       <li class="position-relative mt-4 cursor-pointer ng-star-inserted">
-        <a  class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning" routerLink="/platform/report/conversion-funnel"> Conversion Funnel </a>
+        <a class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning"
+          routerLink="/platform/report/conversion-funnel" (click)="showSpinner()"> Conversion Funnel </a>
       </li>
       <li class="position-relative mt-4 cursor-pointer ng-star-inserted">
-        <a  class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning" routerLink="/platform/report/sale-report"> Sales Report </a>
+        <a class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning" routerLink="/platform/report/sale-report"
+          (click)="showSpinner()"> Sales Report </a>
       </li>
       <li class="position-relative mt-4 cursor-pointer ng-star-inserted">
-        <a  class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning" routerLink="/platform/report/profit"> Profit </a>
+        <a class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning" routerLink="/platform/report/profit"
+          (click)="showSpinner()"> Profit </a>
       </li>
       <li class="position-relative mt-4 cursor-pointer ng-star-inserted">
-        <a  class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning" routerLink="/platform/report/abandoned-checkout"> Abandoned checkout </a>
+        <a class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning"
+          routerLink="/platform/report/abandoned-checkout" (click)="showSpinner()"> Abandoned checkout </a>
       </li>
       <li class="position-relative mt-4 cursor-pointer ng-star-inserted">
-        <a  class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning" routerLink="/platform/report/earning-source"> Earning source </a>
+        <a class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning"
+          routerLink="/platform/report/earning-source" (click)="showSpinner()"> Earning source </a>
       </li>
       <li class="position-relative mt-4 cursor-pointer ng-star-inserted active">
-        <a  class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning " routerLink="/platform/report/top-products"> Top products </a>
+        <a class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning "
+          routerLink="/platform/report/top-products" (click)="showSpinner()"> Top products </a>
       </li>
       <li class="position-relative mt-4 cursor-pointer ng-star-inserted">
-        <a  class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning" routerLink="/platform/report/sale-in-day"> Sales of the Day </a>
+        <a class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning" routerLink="/platform/report/sale-in-day"
+          (click)="showSpinner()"> Sales of the Day </a>
       </li>
       <li class="position-relative mt-4 cursor-pointer ng-star-inserted">
-        <a  class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning " routerLink="/platform/report/top-campaign"> Top Campaigns </a>
+        <a class="nav-item pt-4 pr-4 pl-4 pb-3-1 text-secondary hover-warning "
+          routerLink="/platform/report/top-campaign" (click)="showSpinner()"> Top Campaigns </a>
       </li>
     </ul>
   </div>
@@ -79,7 +87,7 @@
               </div>
               <button class="btn btn-primary  fz btn-burger">
                 <span>
-                  <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <i class="fa fa-sign-out" aria-hidden="true" (click)="showSpinner()"></i>
                   Export</span>
               </button>
             </div>
@@ -92,45 +100,50 @@
           <table class="table table-striped border-top table-hover">
             <thead class="fo-text">
               <tr>
-                <th scope="col" *ngIf="!isHidden('Date')"  (click)="sort('time_value')" >Date&nbsp; <i class="fa fa-sort icon-table"></i></th>
-                <th class="text-center" scope="col" *ngIf="!isHidden('Traffic referrer name')" (click)="sort('source')" >Traffic referrer name&nbsp; <i class="fa fa-sort icon-table"></i></th>
-                <th class="text-center" scope="col" *ngIf="!isHidden('Views')" (click)="sort('views')">Views&nbsp; <i class="fa fa-sort icon-table"></i></th>
-                <th class="text-center" scope="col" *ngIf="!isHidden('ATC')" (click)="sort('atc')">ATC&nbsp; <i class="fa fa-sort icon-table"></i></th>
-                <th class="text-center" scope="col" *ngIf="!isHidden('AVV')"  (click)="sort('total_sales')">AVV&nbsp; <i class="fa fa-sort icon-table"></i></th>
-                <th class="text-center" scope="col" *ngIf="!isHidden('Checkout')" (click)="sort('checkout')">Checkout&nbsp; <i class="fa fa-sort icon-table"></i></th>
-                <th class="text-center" scope="col" *ngIf="!isHidden('Orders')" (click)="sort('orders')">Orders&nbsp; <i class="fa fa-sort icon-table"></i></th>
-                <th class="text-center" scope="col" *ngIf="!isHidden('Items')" (click)="sort('items')">Items&nbsp; <i class="fa fa-sort icon-table"></i></th>
+                <th scope="col" *ngIf="!isHidden('Date')" (click)="sort('time_value')">Date&nbsp; <i
+                    class="fa fa-sort icon-table"></i></th>
+                <th class="text-center" scope="col" *ngIf="!isHidden('Traffic referrer name')" (click)="sort('source')">
+                  Traffic referrer name&nbsp; <i class="fa fa-sort icon-table"></i></th>
+                <th class="text-center" scope="col" *ngIf="!isHidden('Views')" (click)="sort('views')">Views&nbsp; <i
+                    class="fa fa-sort icon-table"></i></th>
+                <th class="text-center" scope="col" *ngIf="!isHidden('ATC')" (click)="sort('atc')">ATC&nbsp; <i
+                    class="fa fa-sort icon-table"></i></th>
+                <th class="text-center" scope="col" *ngIf="!isHidden('AVV')" (click)="sort('total_sales')">AVV&nbsp; <i
+                    class="fa fa-sort icon-table"></i></th>
+                <th class="text-center" scope="col" *ngIf="!isHidden('Checkout')" (click)="sort('checkout')">
+                  Checkout&nbsp; <i class="fa fa-sort icon-table"></i></th>
+                <th class="text-center" scope="col" *ngIf="!isHidden('Orders')" (click)="sort('orders')">Orders&nbsp; <i
+                    class="fa fa-sort icon-table"></i></th>
+                <th class="text-center" scope="col" *ngIf="!isHidden('Items')" (click)="sort('items')">Items&nbsp; <i
+                    class="fa fa-sort icon-table"></i></th>
               </tr>
             </thead>
             <tbody>
 
-              <tr *ngFor="let user of pagedDestinations | orderBy: key: reverse"   class="ng-star-inserted">
-                <th scope="row" class="ng-star-inserted fo-text1" *ngIf="!isHidden('Date')">{{ user.time_value | date }} </th>
-                <td class="text-center ng-star-inserted" *ngIf="!isHidden('Traffic referrer name')">{{ user.source }}</td>
+              <tr *ngFor="let user of pagedDestinations | orderBy: key: reverse" class="ng-star-inserted">
+                <th scope="row" class="ng-star-inserted fo-text1" *ngIf="!isHidden('Date')">{{ user.time_value | date }}
+                </th>
+                <td class="text-center ng-star-inserted" *ngIf="!isHidden('Traffic referrer name')">{{ user.source }}
+                </td>
                 <td class="text-center ng-star-inserted" *ngIf="!isHidden('Views')">{{ user.views }}</td>
-                <td class="text-center ng-star-inserted" *ngIf="!isHidden('ATC')">{{ user.atc  }}
+                <td class="text-center ng-star-inserted" *ngIf="!isHidden('ATC')">{{ user.atc }}
                 </td>
                 <td class="text-center ng-star-inserted" *ngIf="!isHidden('AVV')">{{ user.total_sales | currency }}</td>
-                <td class="text-center ng-star-inserted" *ngIf="!isHidden('Checkout')">{{ user.checkout  }}</td>
+                <td class="text-center ng-star-inserted" *ngIf="!isHidden('Checkout')">{{ user.checkout }}</td>
                 <td class="text-center ng-star-inserted" *ngIf="!isHidden('Orders')">{{ user.orders
                   }}</td>
-                <td class="text-center ng-star-inserted" *ngIf="!isHidden('Items')">{{ user.items  }}
+                <td class="text-center ng-star-inserted" *ngIf="!isHidden('Items')">{{ user.items }}
                 </td>
               </tr>
             </tbody>
           </table>
 
-      </div>
-      <div class="pagination-1">
-        <kendo-datapager
-            [style.width.%]="100"
-            [pageSize]="pageSize"
-            [skip]="skip"
-            [total]="total"
-            [pageSizeValues]="pageSizes"
-            (pageChange)="onPageChange($event)">
-        </kendo-datapager>
-      </div>
+        </div>
+        <div class="pagination-1">
+          <kendo-datapager [style.width.%]="100" [pageSize]="pageSize" [skip]="skip" [total]="total"
+            [pageSizeValues]="pageSizes" (pageChange)="onPageChange($event)" (click)="showSpinner()">
+          </kendo-datapager>
+        </div>
 
 
       </div>

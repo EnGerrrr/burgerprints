@@ -6,6 +6,7 @@ import { HomeRoutingModule } from "./home-rounting.module";
 import { HomeComponent } from "./home.component";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { NgSelectModule } from "@ng-select/ng-select";
+import { NgxSpinnerModule } from 'ngx-spinner';
 @NgModule({
   declarations: [HomeComponent],
   imports: [
@@ -14,6 +15,7 @@ import { NgSelectModule } from "@ng-select/ng-select";
     MatSidenavModule,
     PagesModule,
     NgSelectModule,
+    NgxSpinnerModule
   ]
 })
 export class HomeModule {}

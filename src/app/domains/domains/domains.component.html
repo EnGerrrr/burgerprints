@@ -2,7 +2,7 @@
   <div id="bg" class="bg-wrap-title d-flex flex-wrap my-3">
     <h1 class="title mr-auto">ALL DOMAINS</h1>
     <div class="actions-box" routerLink="creat">
-      <a class="btn btn-grad-warning shadow">
+      <a class="btn btn-grad-warning shadow" (click)="showSpinner()">
         CREATE NEW DOMAIN
       </a>
     </div>
@@ -33,12 +33,12 @@
               <td class="d-flex justify-content-center">
                 <a role="button"
                   class="btn domain-status d-flex align-items-center justify-content-center btn-grad-success ng-star-inserted btn-grad-warning"
-                  routerLink="register">{{ data.state }}</a>
+                  routerLink="register" (click)="showSpinner()">{{ data.state }}</a>
               </td>
               <td>
                 <div class="d-flex align-items-center" routerLink="details" >
                   <a class="btn btn-action d-flex align-items-center justify-content-center shadow"
-                    tooltip="View options" placement="top">
+                    tooltip="View options" placement="top" (click)="showSpinner()">
                     <i class="fa fa-eye" aria-hidden="true"></i>
                   </a>
                 </div>
@@ -50,7 +50,7 @@
     </div>
     <div class="pagination-1">
       <kendo-datapager [style.width.%]="100" [pageSize]="pageSize" [skip]="skip" [total]="total"
-        [pageSizeValues]="pageSizes" (pageChange)="onPageChange($event)">
+        [pageSizeValues]="pageSizes" (pageChange)="onPageChange($event)" (click)="showSpinner()">
       </kendo-datapager>
     </div>
   </div>
