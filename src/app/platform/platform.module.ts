@@ -31,6 +31,7 @@ import { FrontEditComponent } from "@/store-fronts/front-edit/front-edit.compone
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { CreatStoreComponent } from "@/store-fronts/creat-store/creat-store.component";
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { PromotionComponent } from "@/promotion/promotion.component";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     TopProductsComponent,
     StoreFrontsComponent,
     FrontEditComponent,
-    CreatStoreComponent
+    CreatStoreComponent,
+    PromotionComponent
   ],
   imports: [
     CommonModule,

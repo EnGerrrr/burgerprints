@@ -59,7 +59,8 @@ export class DomainDetailsSupComponent implements OnInit {
     "778899"
   ];
   selectedIndex = 0;
-
+  selectedIndex1: number;
+  selectedIndex2: number;
   colorList = [
     {
       color: "#ed5565",
@@ -96,5 +97,17 @@ export class DomainDetailsSupComponent implements OnInit {
 
   chooseColor(index: number) {
     this.selectedIndex = index;
+  }
+
+  select(index: number) {
+    this.selectedIndex1= index
+  }
+  select1(index: number) {
+    this.selectedIndex2= index
+  }
+
+  deleteItem(index: number) {
+    this.selectedDomains.splice(index,1);
+    // this.domainsList2.splice(this.domainsList2.indexOf(), 1)
   }
 }

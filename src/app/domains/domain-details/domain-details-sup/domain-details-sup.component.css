@@ -178,5 +178,52 @@
   border-color: #b3b2b2 #ccc #d9d9d9;
 }
 .custom {
-  margin: 20px 0px;
+  margin: 20px 0px 0 0;
+}
+.navigation-main ul li {
+  list-style: none;
+}
+.navigation-main ul {
+  padding-left: 0 !important;
+}
+.custom-btn {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  height: 40px;
+  font-size: 15px;
+}
+.fa-chevron-right {
+  position: absolute;
+  right: 4px;
+}
+.item-tag.active {
+  background-color: #f0f0f0;
+}
+.list-group-item.active {
+  z-index: 2;
+  color: #000;
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+  border-radius: 8px;
+}
+.list-group-item {
+  border: none;
+}
+.btn-grad-primary {
+  margin-top: 20px;
+  background: -webkit-gradient(linear,left top,right top,color-stop(-15.42%,#0027b1),color-stop(162.62%,#5b7bec));
+  background: linear-gradient(90deg,#0027b1 -15.42%,#5b7bec 162.62%);
+  border-radius: 5px;
+  width: 107px;
+  color: #fff;
+  height: 40px;
+}
+.btn-bg-default {
+  margin-top: 20px;
+  width: 107px;
+  height: 40px;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  margin-left: 20px;
 }

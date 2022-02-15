@@ -29,34 +29,55 @@
       <div class="col-xl-7 col-md-8 col-12 custom-navigate">
         <div class="row menu-choose-tags">
           <div class="col-6 list-menu">
-            <ng-select  class="custom" [items]="domainsList" [addTag]="true" [multiple]="true" [selectOnTab]="true" [closeOnSelect]="false"
-                placeholder="Original category" [searchable]="true" bindLabel="" name="domainsList" [(ngModel)]="selectedDomains" >
+            <ng-select class="custom" [items]="domainsList" [addTag]="true" [multiple]="true" [selectOnTab]="true"
+              [closeOnSelect]="false" placeholder="Original category" [searchable]="true" bindLabel=""
+              name="domainsList" [(ngModel)]="selectedDomains">
             </ng-select>
-            <div class="mt-3">
-              Selected value: <br/>
+            <div class="mt-3 navigation-main">
+              <!-- Selected value: <br/> -->
               <ul>
-                  <li *ngFor="let item of selectedDomains">{{item}}</li>
+                <li *ngFor="let item of selectedDomains; let i = index" (click)="select(i)">
+                  <span type="button" class="btn custom-btn"
+                    [ngClass]="{'active': selectedIndex1 === i, 'list-group-item': true }">{{item}}
+                    <!-- <i class="icon-bg-Delete" (click)="deleteItem(i)"></i> -->
+                    <i class="fas fa-chevron-right ml-auto  mr-2"></i>
+                  </span>
+                </li>
               </ul>
+
               <!-- <button (click)="clearModel()" class="btn btn-secondary btn-sm">Clear model</button>
               <button (click)="changeModel()" class="btn btn-secondary btn-sm">Change model</button> -->
-          </div>
+            </div>
 
           </div>
           <div class="col-6 list-menu">
             <div class="selector-tags">
-              <ng-select  class="custom" [items]="domainsList2" [addTag]="true" [multiple]="true" [closeOnSelect]="false"
-                placeholder="Corresponding sub-category" [searchable]="true" name="domainsList2" bindLabel="" [(ngModel)]="selectedDomains2" >
+              <ng-select class="custom" [items]="domainsList2" [addTag]="true" [multiple]="true" [closeOnSelect]="false"
+                placeholder="Corresponding sub-category" [searchable]="true" name="domainsList2" bindLabel=""
+                [(ngModel)]="selectedDomains2">
               </ng-select>
-              <div class="mt-3">
-                Selected value: <br/>
+              <div class="mt-3 navigation-main">
                 <ul>
-                    <li *ngFor="let item of selectedDomains2">{{item}}</li>
+                  <li *ngFor="let item of selectedDomains2; let i = index" (click)="select1(i)">
+                    <span type="button" class="btn custom-btn"
+                      [ngClass]="{'active': selectedIndex2 === i, 'list-group-item': true }">{{item}}
+                    </span>
+                  </li>
                 </ul>
                 <!-- <button (click)="clearModel()" class="btn btn-secondary btn-sm">Clear model</button>
                 <button (click)="changeModel()" class="btn btn-secondary btn-sm">Change model</button> -->
-            </div>
+              </div>
             </div>
           </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <button class="btn btn-grad-primary">
+            Confirm
+          </button>
+          <button class="btn btn-bg-default">
+            Cancel
+          </button>
         </div>
       </div>
     </div>

@@ -4,3 +4,7 @@
     color: #fff;
     pointer-events: auto;
 }
+.dialog-button :hover {
+background: #fff !important;
+color: #fa9918 !important;
+}

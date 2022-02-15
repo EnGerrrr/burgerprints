@@ -33,10 +33,8 @@ import { FooterComponent } from "./_components/footer/footer.component";
 import { LoginComponent } from "./login";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { CommonModule } from "@angular/common";
-import { JwtModule } from "@auth0/angular-jwt";;
-import { SideBarComponent } from './side-bar/side-bar.component'
-
-
+import { JwtModule } from "@auth0/angular-jwt";
+import { SideBarComponent } from "./side-bar/side-bar.component";
 
 function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -79,10 +77,8 @@ const ENTRY_COMPONENTS = [];
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
-    ForgotPasswordComponent,
-    SideBarComponent
-
-
+    ForgotPasswordComponent,
+    SideBarComponent,
 
   ],
   entryComponents: [],
