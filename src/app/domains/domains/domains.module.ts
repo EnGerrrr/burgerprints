@@ -17,7 +17,7 @@ import { DomainDetailsSupComponent } from "../domain-details/domain-details-sup/
 import { DomainDetailsSettingsComponent } from "../domain-details/domain-details-settings/domain-details-settings.component";
 import { DomainDetailsHdftComponent } from "../domain-details/domain-details-hdft/domain-details-hdft.component";
 import { DomainDetailsPromotionsComponent } from "../domain-details/domain-details-promotions/domain-details-promotions.component";
-import { DomainDetailsEmailsComponent } from "../domain-details/domain-details-emails/domain-details-emails.component";
+import { DialogContentExampleDialog1, DomainDetailsEmailsComponent } from "../domain-details/domain-details-emails/domain-details-emails.component";
 import { DomainDetailsGoogleComponent } from "../domain-details/domain-details-google/domain-details-google.component";
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgSelectModule } from '@ng-select/ng-select';
@@ -28,6 +28,7 @@ import { FormsModule } from "@angular/forms";
     CreateDomainComponent,
     RegisterDomainsComponent,
     DialogContentExampleDialog,
+    DialogContentExampleDialog1,
     DomainDetailsComponent,
     DomainDetailsSupComponent,
     DomainDetailsSettingsComponent,
@@ -51,7 +52,7 @@ import { FormsModule } from "@angular/forms";
   ],
   entryComponents: [
     DialogContentExampleDialog,
-
+    DialogContentExampleDialog1
   ],
   bootstrap: [DomainDetailsComponent]
 })

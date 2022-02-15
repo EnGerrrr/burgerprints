@@ -7,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class DomainDetailsSupComponent implements OnInit {
   selectedDomains ;
+  selectedDomains2 ;
   domainsList : any[] = [
     "Abcxyz",
     "Aaaaa",
@@ -48,7 +49,15 @@ export class DomainDetailsSupComponent implements OnInit {
     "Wyoming",
   ];
 
-
+  domainsList2 : any[] =[
+    "112233",
+    "223344",
+    "334455",
+    "445566",
+    "556677",
+    "667788",
+    "778899"
+  ];
   selectedIndex = 0;
 
   colorList = [

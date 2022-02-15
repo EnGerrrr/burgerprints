@@ -991,6 +991,23 @@ button:focus {
   background-color: #ef911b;
   color: #fff;
 }
+.ng-value {
+  display: none;
+}
+.ng-clear-wrapper {
+  display: none;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+.ng-dropdown-panel
+  .ng-dropdown-panel-items
+  .ng-option.ng-option-selected.ng-option-marked {
+  background-color: #ef911b;
+  color: #fff;
+}
+.ng-option {
+  padding: 2px 16px !important;
+  border-bottom: 1px solid #e8e8e8;
+}
 
 .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
   border-color: #5ea824;

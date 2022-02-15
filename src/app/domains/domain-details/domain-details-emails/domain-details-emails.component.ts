@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-domain-details-emails',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DomainDetailsEmailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+
+  openDialog() {
+    this.dialog.open(DialogContentExampleDialog1,{
+      width: '80vw',
+    });
+  }
 
   ngOnInit() {
   }
 
 }
+@Component({
+  selector: "dialog-content-example-dialog",
+  templateUrl: "./dialog-content-example-dialog.html",
+  styleUrls: ["./dialog-content-example-dialog.css"]
+})
+export class DialogContentExampleDialog1 {}

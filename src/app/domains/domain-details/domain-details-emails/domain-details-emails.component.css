@@ -1,0 +1,57 @@
+.email-list {
+  word-break: keep-all;
+  font-size: 16px;
+}
+.form-custom {
+  margin-left: 13px;
+  margin-top: 22px;
+}
+.pl-25 {
+  padding-left: 25px;
+}
+
+li {
+  font-weight: 400;
+  font-style: italic;
+  line-height: 18.75px;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 15px;
+}
+li::marker {
+  font-size: 25px;
+}
+.btn-action {
+  max-width: 300px;
+}
+
+.btn-register {
+  cursor: pointer;
+  margin-bottom: 10px;
+  height: 40px;
+  min-width: 195px;
+  width: 240px;
+}
+.btn-outline-grad-warning {
+  background: -webkit-gradient(linear,left top,right top,color-stop(-4.09%,#d97f0e),color-stop(105.59%,#ffa432));
+  background: linear-gradient(90deg,#d97f0e -4.09%,#ffa432 105.59%);
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ef911b;
+  padding: 10px 23px;
+  font-size: 16px;
+  font-weight: 400;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+}
+.btn-outline-grad-warning:hover {
+  color: #ef911b;
+  background: #fff;
+  -webkit-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-action {
+  height: 40px;
+  width: 240px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
