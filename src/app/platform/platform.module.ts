@@ -24,14 +24,13 @@ import { TopProductsComponent } from "@/report/top-products/top-products.compone
 import { NgApexchartsModule } from "ng-apexcharts";
 import { NgxPaginationModule } from "ngx-pagination";
 import { StoreFrontsComponent } from "@/store-fronts/store-fronts/store-fronts.component";
-import { PagerModule } from '@progress/kendo-angular-pager';
-import { Ng2OrderModule } from 'ng2-order-pipe'
-import { UiSwitchModule } from 'ngx-toggle-switch';
+import { PagerModule } from "@progress/kendo-angular-pager";
+import { Ng2OrderModule } from "ng2-order-pipe";
+import { UiSwitchModule } from "ngx-toggle-switch";
 import { FrontEditComponent } from "@/store-fronts/front-edit/front-edit.component";
-import { AngularEditorModule } from '@kolkov/angular-editor';
+import { AngularEditorModule } from "@kolkov/angular-editor";
 import { CreatStoreComponent } from "@/store-fronts/creat-store/creat-store.component";
-import { NgxSpinnerModule } from 'ngx-spinner';
-import { PromotionComponent } from "@/promotion/promotion.component";
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -54,7 +53,6 @@ import { PromotionComponent } from "@/promotion/promotion.component";
     StoreFrontsComponent,
     FrontEditComponent,
     CreatStoreComponent,
-    PromotionComponent
   ],
   imports: [
     CommonModule,
@@ -69,7 +67,7 @@ import { PromotionComponent } from "@/promotion/promotion.component";
     Ng2OrderModule,
     UiSwitchModule,
     AngularEditorModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
   ],
 })
 export class PlatformModule {}

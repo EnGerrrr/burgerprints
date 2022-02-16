@@ -1,0 +1,66 @@
+#main {
+  background-color: #e5e5e5;
+  height: auto;
+  padding: 30px 30px 7rem;
+}
+.cards-container {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  height: auto;
+}
+#bg {
+  font-size: 16px;
+  background-color: #e5e5e5;
+  position: relative;
+}
+.bg-wrap-title .title {
+  font-size: 24px;
+  font-weight: 600;
+  word-break: keep-all;
+}
+.cards-container .card-body {
+  padding: 30px;
+}
+.title-sections {
+  font-size: 24px;
+  padding-left: 14px;
+  word-break: revert;
+  margin-bottom: 15px;
+  position: relative;
+}
+.title-sections::before {
+  content: "";
+  width: 4px;
+  height: 18px;
+  position: absolute;
+  background-color: #e98a13;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.block-sessions .block-input input {
+  height: 40px;
+  border-radius: 5px;
+}
+.sub-noti {
+  word-break: keep-all;
+  margin-top: -12px;
+  margin-left: 14px;
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  line-height: 16.41px;
+}
+.slide-custom {
+  height: 30px;
+  padding: 0 !important;
+  font-size: 16.8px;
+  font-weight: 400;
+  color: #444;
+  position: absolute;
+  right: 0;
+  width: 42px;
+  height: 44px;
+  margin-right: 66px;
+}

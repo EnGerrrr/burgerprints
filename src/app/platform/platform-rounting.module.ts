@@ -52,7 +52,7 @@ const routes: Routes = [
             import("../domains/domains/domains.module").then((m) => m.DomainsModule),
         },
         {
-          path:'promotion',
+          path:"promotion",
           loadChildren: () =>
             import("../promotion/promotion.module").then((m) => m.PromotionModule),
         }

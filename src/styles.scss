@@ -870,9 +870,7 @@ $grid-gutter-large: 50px;
 .select2-selection__rendered {
   line-height: 31px !important;
 }
-/* .select2-container {
-    height: 44px !important;
-} */
+
 .select2-selection__arrow,
 .select2-container--default .select2-selection--single {
   height: 34px !important;
@@ -975,6 +973,7 @@ button:focus {
   top: 0 !important;
   padding-top: 6px;
   padding-left: 12px;
+  display: none !important;
 }
 .ng-select .ng-select-container {
   min-height: 40px !important;
@@ -1011,7 +1010,34 @@ button:focus {
   padding: 2px 16px !important;
   border-bottom: 1px solid #e8e8e8;
 }
+.promotion-domain-select {
+  .ng-select-container {
+    min-height: 50px !important;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000;
+  }
+  .ng-value {
+    padding-left: 10px;
+    padding-top: 4px;
+  }
+  .ng-arrow-wrapper {
+    padding-bottom: 6px;
+  }
+  .ng-placeholder {
+    padding-left: 12px;
+    // padding-top: 2px;
+  }
+  .ng-select .ng-select-container .ng-value-container {
+    padding-top: 4px !important;
+  }
 
+}
+
+
+.ng-select .ng-select-container:after {
+  border-bottom: thin solid #fff !important;
+}
 .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
   border-color: #5ea824;
   background-color: #5ea824;

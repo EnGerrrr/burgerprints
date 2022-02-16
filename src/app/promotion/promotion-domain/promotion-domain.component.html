@@ -1,0 +1,46 @@
+<div id="main">
+  <div id="bg" class="bg-wrap-title d-flex flex-wrap my-3">
+    <h1 class="title mr-auto">PROMOTIONS</h1>
+  </div>
+
+  <div class="cards-container">
+    <div class="card-body">
+      <ng-select [searchable]="false" class="promotion-domain-select" placeholder="Select domain" >
+        <ng-option *ngFor="let item of domains">{{ item.name }}</ng-option>
+    </ng-select>
+
+    <form class="mt-30">
+      <div class="block-sessions d-flex">
+        <div class="title-sections">
+          Discount setting
+        </div>
+        <mat-slide-toggle [checked] = true class="slide-custom"></mat-slide-toggle>
+      </div>
+        <div class="sub-noti">
+          Show a countdown timer in detail page
+        </div>
+        <div>
+          <div class="row mt-4">
+            <div class="col-sm-6 col-xl-4 mw-100px">
+              <div class="font-size-16 text-dark mb-3">
+                Minimum Qty
+              </div>
+              <div>
+
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-4 mw-150px">
+              <div class="font-size-16 text-dark mb-3">
+                Discount (%)
+              </div>
+              <div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+    </div>
+  </div>
+</div>
