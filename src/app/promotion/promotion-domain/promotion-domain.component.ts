@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { NgxSpinnerService } from "ngx-spinner";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-promotion-domain",
@@ -6,6 +8,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./promotion-domain.component.scss"],
 })
 export class PromotionDomainComponent implements OnInit {
+  isShown: boolean = true;
+
   domains = [
     { site_name: "Trang Thanh", name: "trangthanh.com" },
     { site_name: "trangthanh21", name: "trangthanh2111.com" },
@@ -24,7 +28,67 @@ export class PromotionDomainComponent implements OnInit {
     { site_name: "Hung Shirt", name: "hungdt.com" },
   ];
 
-  constructor() {}
+  numberValue = 3;
+  numberValue1 = 10;
+  numberValue2 = 5;
+  numberValue3 = 15;
+  numberValue4 = 10;
+  numberValue5 = 20;
+  numberValue6 = 50;
+
+  constructor(
+    private spinner: NgxSpinnerService,
+    private toastr: ToastrService
+  ) {}
+
+  toggleShow() {
+    this.isShown = !this.isShown;
+  }
+
+  showSpinner() {
+    this.spinner.show(undefined, { fullScreen: true });
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 500);
+  }
+
+  showSuccess() {
+    this.toastr.success( "Update successful", "Successfully!",  {
+      timeOut: 2000,
+    });
+  }
+
+  showSuccessFreeShipping() {
+    this.toastr.success( "Update Free shipping success", "Successfully!",  {
+      timeOut: 2000,
+    });
+  }
+
+
+
+//Modal
+  isVisibleMiddle = false;
+  isConfirmLoading = false;
+
+
+  showModal(): void {
+    this.isVisibleMiddle = true;
+  }
+
+  handleOk(): void {
+    this.isConfirmLoading = true;
+    setTimeout(() => {
+      this.isVisibleMiddle = false;
+      this.isConfirmLoading = false;
+    }, 3000);
+  }
+
+  handleCancel(): void {
+    this.isVisibleMiddle = false;
+  }
+
+//Date Picker
+size = 'default';
 
   ngOnInit() {}
 }

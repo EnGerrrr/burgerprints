@@ -1010,30 +1010,6 @@ button:focus {
   padding: 2px 16px !important;
   border-bottom: 1px solid #e8e8e8;
 }
-.promotion-domain-select {
-  .ng-select-container {
-    min-height: 50px !important;
-    font-size: 16px;
-    line-height: 16px;
-    color: #000;
-  }
-  .ng-value {
-    padding-left: 10px;
-    padding-top: 4px;
-  }
-  .ng-arrow-wrapper {
-    padding-bottom: 6px;
-  }
-  .ng-placeholder {
-    padding-left: 12px;
-    // padding-top: 2px;
-  }
-  .ng-select .ng-select-container .ng-value-container {
-    padding-top: 4px !important;
-  }
-
-}
-
 
 .ng-select .ng-select-container:after {
   border-bottom: thin solid #fff !important;
@@ -1058,6 +1034,59 @@ button:focus {
   background-color: #fff;
   margin-left: 10px;
   margin-top: 6px;
+}
+// Promotion
+
+.promotion-domain-select {
+  .ng-select-container {
+    min-height: 50px !important;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000;
+  }
+  .ng-value {
+    padding-left: 10px;
+    padding-top: 4px;
+  }
+  .ng-arrow-wrapper {
+    padding-bottom: 6px;
+  }
+  .ng-placeholder {
+    padding-left: 12px;
+    // padding-top: 2px;
+  }
+  .ng-select .ng-select-container .ng-value-container {
+    padding-top: 4px !important;
+  }
+}
+.promotion-input {
+  .ant-input-number-input {
+    text-align: center !important;
+  }
+}
+.threshold-input {
+  .ant-input-number-input {
+    text-align: center !important;
+  }
+}
+.promotion-modal {
+  .ant-modal-content  {
+    width: 800px;
+    top: 200px;
+    right: 140px;
+
+  }
+  .ant-modal-title {
+    font-size: 20px;
+  }
+  .ant-modal-header {
+    background-color: #dedede;
+    line-height: 23px;
+    font-weight: 500;
+  }
+  .anticon {
+    font-size: 22px;
+  }
 }
 
 @keyframes lds-spinner {

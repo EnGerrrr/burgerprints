@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
       this.spinner.show(undefined, { fullScreen: true });
       setTimeout(() => {
         this.spinner.hide();
-      }, 800);
+      }, 500);
     }
 
   ngOnInit() {}

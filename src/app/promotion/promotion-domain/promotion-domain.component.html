@@ -5,42 +5,196 @@
 
   <div class="cards-container">
     <div class="card-body">
-      <ng-select [searchable]="false" class="promotion-domain-select" placeholder="Select domain" >
+      <ng-select [searchable]="false" class="promotion-domain-select" placeholder="Select domain">
         <ng-option *ngFor="let item of domains">{{ item.name }}</ng-option>
-    </ng-select>
+      </ng-select>
 
-    <form class="mt-30">
-      <div class="block-sessions d-flex">
-        <div class="title-sections">
-          Discount setting
+      <form class="mt-30 mb-5">
+        <div class="block-sessions d-flex">
+          <div class="title-sections">
+            Discount setting
+          </div>
+          <mat-slide-toggle [checked]=true (click)="toggleShow(); showSpinner(); showSuccess()" class="slide-custom">
+          </mat-slide-toggle>
         </div>
-        <mat-slide-toggle [checked] = true class="slide-custom"></mat-slide-toggle>
-      </div>
         <div class="sub-noti">
-          Show a countdown timer in detail page
+          There are some other lovely items in store, get them and save more!
         </div>
-        <div>
+
+
+        <div *ngIf="isShown">
           <div class="row mt-4">
             <div class="col-sm-6 col-xl-4 mw-100px">
               <div class="font-size-16 text-dark mb-3">
                 Minimum Qty
               </div>
-              <div>
-
-              </div>
             </div>
-
             <div class="col-sm-6 col-xl-4 mw-150px">
               <div class="font-size-16 text-dark mb-3">
                 Discount (%)
               </div>
-              <div>
-
-              </div>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col-md-6 col-xl-4 mb-3 promotion-input">
+              <nz-input-number [(ngModel)]="numberValue" [nzSize]="'large'" name="slide" [nzMin]="1" [nzMax]="100"
+                [nzStep]="1">
+              </nz-input-number>
+            </div>
+            <div class="col-md-6 col-xl-4 mb-3 promotion-input">
+              <nz-input-number [(ngModel)]="numberValue1" [nzSize]="'large'" name="slide1" [nzMin]="1" [nzMax]="100"
+                [nzStep]="1">
+              </nz-input-number>
+              <span class="text-danger font-size-16 ml-2 align-self-center">% OFF</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-xl-4 mb-3 promotion-input">
+              <nz-input-number [(ngModel)]="numberValue2" [nzSize]="'large'" name="slide2" [nzMin]="1" [nzMax]="100"
+                [nzStep]="1">
+              </nz-input-number>
+            </div>
+            <div class="col-md-6 col-xl-4 mb-3 promotion-input">
+              <nz-input-number [(ngModel)]="numberValue3" [nzSize]="'large'" name="slide3" [nzMin]="1" [nzMax]="100"
+                [nzStep]="1">
+              </nz-input-number>
+              <span class="text-danger font-size-16 ml-2 align-self-center">% OFF</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-xl-4 mb-3 promotion-input">
+              <nz-input-number [(ngModel)]="numberValue4" [nzSize]="'large'" name="slide4" [nzMin]="1" [nzMax]="100"
+                [nzStep]="1">
+              </nz-input-number>
+            </div>
+            <div class="col-md-6 col-xl-4 mb-3 promotion-input">
+              <nz-input-number [(ngModel)]="numberValue5" [nzSize]="'large'" name="slide5" [nzMin]="1" [nzMax]="100"
+                [nzStep]="1">
+              </nz-input-number>
+              <span class="text-danger font-size-16 ml-2 align-self-center">% OFF</span>
+            </div>
+          </div>
+          <div class="d-block border-top">
+            <button class="btn btn-burger mt-3">
+              SAVE
+            </button>
+          </div>
         </div>
-    </form>
+      </form>
+
+      <form class="mt-30 mb-5">
+        <div class="block-sessions d-flex">
+          <div class="title-sections">
+            Free shipping
+          </div>
+        </div>
+        <div class="sub-noti">
+          Sitewide free shipping to orders above threshold amount
+        </div>
+        <div class="table-responsive position-relative ">
+          <table class="table table-striped table-borderless overflow-table m-0">
+            <thead>
+              <tr>
+                <th scope="col">
+                  Threshold
+                </th>
+                <th class="text-center" scope="col">
+                  Type
+                </th>
+                <th class="text-right" scope="col">
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <nz-input-number class="threshold-input" [(ngModel)]="numberValue6" [nzSize]="'large'" name="slide6"
+                    [nzMin]="1" [nzMax]="100" [nzStep]="1">
+                  </nz-input-number>
+                </td>
+                <td class="text-center">
+                  Free shipping
+                </td>
+                <td class="text-right">
+                  <mat-slide-toggle [checked]=false (click)="showSpinner(); showSuccessFreeShipping()"
+                    class="slide-custom2">
+                  </mat-slide-toggle>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-block border-top mt-3">
+            <button class="btn btn-burger mt-3">
+              SAVE
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <form class="mt-30 mb-5">
+        <div class="d-flex justify-content-between mb-1">
+          <div>
+            <div class="block-sessions d-flex">
+              <div class="title-sections">
+                Promotions
+              </div>
+            </div>
+            <div class="sub-noti">
+              Applies to all campaign in this domain
+            </div>
+          </div>
+
+          <div>
+            <button nz-button class="btn-add-free" type="button" (click)="showModal()" nzType="primary">
+              CREATE NEW PROMOTION
+            </button>
+            <nz-modal class="promotion-modal"
+              [(nzVisible)]="isVisibleMiddle"
+              [nzTitle]="modalTitle"
+              [nzContent]="modalContent"
+              [nzFooter]="modalFooter"
+              (nzOnCancel)="handleCancel()"
+              (nzOnOk)="handleOk()"
+            >
+              <ng-template #modalTitle>
+                Promotion
+              </ng-template>
+
+              <ng-template #modalContent>
+               <div class="mb-4">
+                <label class="form-label ">Promo ID (alphanumeric)</label>
+                <input type="text" class="form-control input-modal" name="input-modal">
+               </div>
+               <div class="mb-4">
+                <label class="form-label">Type</label>
+                <ng-select [searchable]="false" class="promotion-domain-select" >
+                  <ng-option value >Freeship</ng-option>
+                  <ng-option>Discount</ng-option>
+                </ng-select>
+               </div>
+               <div class="mb-4">
+                <label class="form-label">Expiration date</label>
+                <nz-date-picker [nzSize]="size"></nz-date-picker>
+               </div>
+              </ng-template>
+
+              <ng-template #modalFooter>
+                <button nz-button nzType="primary" (click)="handleOk()" [nzLoading]="isConfirmLoading">Custom Submit</button>
+                <button nz-button nzType="default" (click)="handleCancel()">Custom Callback</button>
+              </ng-template>
+            </nz-modal>
+          </div>
+
+        </div>
+        <div>
+
+        </div>
+
+      </form>
     </div>
   </div>
 </div>

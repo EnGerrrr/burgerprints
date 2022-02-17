@@ -45,9 +45,9 @@
 }
 .sub-noti {
   word-break: keep-all;
-  margin-top: -12px;
+  margin-top: -10px;
   margin-left: 14px;
-  font-style: italic;
+  font-style: normal;
   font-size: 14px;
   color: #666;
   line-height: 16.41px;
@@ -63,4 +63,75 @@
   width: 42px;
   height: 44px;
   margin-right: 66px;
+}
+.ant-input-number-lg {
+  padding: 0;
+  font-size: 16px;
+  width: 150px;
+}
+.font-size-16 {
+  font-size: 16px;
+}
+.btn-burger {
+  width: 190px;
+  height: 50px;
+  color: #fff;
+  background-color: #ef911b;
+  border-color: #ef911b ;
+}
+.threshold-input {
+  width: 90px;
+  height: 39.64px;
+  border: none;
+  text-align: center;
+  outline: 0;
+}
+.slide-custom2 {
+  height: 30px;
+  padding: 0 !important;
+  font-size: 16.8px;
+  font-weight: 400;
+  color: #444;
+  position: relative;
+  right: 0;
+  width: 42px;
+  height: 44px;
+  margin-right: 8px;
+}
+.table th {
+  font-weight: 500;
+  color: #000000b3;
+  font-size: 16px;
+  text-transform: none;
+}
+.threshold-input :hover {
+  display: none;
+}
+.btn-add-free {
+  background: #fff;
+  height: 40px;
+  border-radius: 5px;
+  min-width: 190px;
+  border: 1px solid #ef911b;
+  color: #ef911b;
+  box-shadow: none;
+}
+.btn-add-free :hover {
+  color: #fff!important;
+  background-color: #f69c2a;
+}
+.input-modal {
+  height: 50px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+}
+.form-label {
+  font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.form-control {
+  border-radius: 5px;
 }
