@@ -152,43 +152,129 @@
             <button nz-button class="btn-add-free" type="button" (click)="showModal()" nzType="primary">
               CREATE NEW PROMOTION
             </button>
-            <nz-modal class="promotion-modal"
-              [(nzVisible)]="isVisibleMiddle"
-              [nzTitle]="modalTitle"
-              [nzContent]="modalContent"
-              [nzFooter]="modalFooter"
-              (nzOnCancel)="handleCancel()"
-              (nzOnOk)="handleOk()"
-            >
+            <nz-modal class="promotion-modal" [(nzVisible)]="isVisibleMiddle" [nzTitle]="modalTitle"
+              [nzContent]="modalContent" [nzFooter]="modalFooter" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
               <ng-template #modalTitle>
                 Promotion
               </ng-template>
 
               <ng-template #modalContent>
-               <div class="mb-4">
-                <label class="form-label ">Promo ID (alphanumeric)</label>
-                <input type="text" class="form-control input-modal" name="input-modal">
-               </div>
-               <div class="mb-4">
-                <label class="form-label">Type</label>
-                <ng-select [searchable]="false" class="promotion-domain-select" >
-                  <ng-option value >Freeship</ng-option>
-                  <ng-option>Discount</ng-option>
-                </ng-select>
-               </div>
-               <div class="mb-4">
-                <label class="form-label">Expiration date</label>
-                <nz-date-picker [nzSize]="size"></nz-date-picker>
-               </div>
+                <div class="mb-4">
+                  <label class="form-label ">Promo ID (alphanumeric)</label>
+                  <input type="text" class="form-control input-modal" name="input-modal">
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="type" (click)="showAmount()">Type</label>
+                  <ng-select [searchable]="false" labelForId="type" class="promotion-domain-select">
+                    <ng-option value="type">Freeship</ng-option>
+                    <ng-option>Discount</ng-option>
+                  </ng-select>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label">Expiration date</label>
+                  <input type="text" class="form-control input-modal" name="input-modal">
+                </div>
+                <div class="mb-4 " *ngIf="isShowAmount">
+                  <label class="form-label">Amount</label>
+                  <div class="input-group mb-3 border-input-select">
+                    <div class="input-group-prepend">
+                      <ng-select [searchable]="false" aria-valuetext="" class="promotion-domain-select">
+                        <ng-option>FIX</ng-option>
+                        <ng-option>PERCENT</ng-option>
+                      </ng-select>
+                    </div>
+                    <div class="amount-input">
+                      <nz-input-number class="threshold-input1" [(ngModel)]="numberValue7" [nzSize]="'large'"
+                        name="slide7" [nzMin]="1" [nzMax]="100" [nzStep]="1">
+                      </nz-input-number>
+                    </div>
+
+                  </div>
+                </div>
               </ng-template>
 
-              <ng-template #modalFooter>
-                <button nz-button nzType="primary" (click)="handleOk()" [nzLoading]="isConfirmLoading">Custom Submit</button>
-                <button nz-button nzType="default" (click)="handleCancel()">Custom Callback</button>
+              <ng-template class="modal-footer" #modalFooter>
+                <div class="btn-submit">
+                  <button nz-button nzType="primary" (click)="handleOk()" [nzLoading]="isConfirmLoading">ADD
+                    DISCOUNT</button>
+                  <button nz-button nzType="default" (click)="handleCancel()">CLOSE</button>
+                </div>
               </ng-template>
             </nz-modal>
           </div>
 
+
+        </div>
+        <div class="table-responsive position-relative ">
+          <table class="table table-striped table-borderless overflow-table m-0">
+            <thead>
+              <tr>
+                <th scope="col">
+                  Promo ID
+                </th>
+                <th scope="col">
+                  Type
+                </th>
+                <th scope="col">
+                  Amount
+                </th>
+                <th scope="col" class="text-center">
+                  Expiration date
+                </th>
+                <th scope="col" class="text-center">
+                  Redeemed
+                </th>
+                <th scope="col">
+                  Status
+                </th>
+                <th scope="col" class="text-right">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  abcxyz
+                </td>
+                <td>
+                  freeship
+                </td>
+                <td></td>
+                <td class="text-center">
+                  27/2/2022
+                </td>
+                <td class="text-center">
+                  0
+                </td>
+                <td>
+                  <mat-slide-toggle [checked]=true (click)="showSpinner(); showSuccessPromotion()"
+                    class="slide-custom2">
+                  </mat-slide-toggle>
+                </td>
+                <td class="text-right">
+                  <button nz-button (click)="showModalDeletePromotion()" class="button-action ml-3">
+                    <i class="fas fa-trash-alt text-danger align-middle"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <nz-modal class="promotion-modal1"
+            [(nzVisible)]="isVisible"
+            nzTitle="Confirm delete promotion"
+            [nzOkLoading]="isOkLoading"
+            [nzFooter]="modalFooter1"
+          >
+            <p>You sure want to delete this record!</p>
+            <ng-template class="modal-footer" #modalFooter1>
+              <div class="btn-submit1 text-center">
+                <button nz-button nzType="primary" (click)="handleOkDeletePromotion()" [nzLoading]="isConfirmLoading">Yes
+                  </button>
+                <button nz-button nzType="default" (click)="handleCancelDeletePromotion()">No</button>
+              </div>
+            </ng-template>
+          </nz-modal>
         </div>
         <div>
 

@@ -9,6 +9,7 @@ import { ToastrService } from "ngx-toastr";
 })
 export class PromotionDomainComponent implements OnInit {
   isShown: boolean = true;
+  isShowAmount: boolean = false;
 
   domains = [
     { site_name: "Trang Thanh", name: "trangthanh.com" },
@@ -35,6 +36,7 @@ export class PromotionDomainComponent implements OnInit {
   numberValue4 = 10;
   numberValue5 = 20;
   numberValue6 = 50;
+  numberValue7 = 0;
 
   constructor(
     private spinner: NgxSpinnerService,
@@ -45,6 +47,10 @@ export class PromotionDomainComponent implements OnInit {
     this.isShown = !this.isShown;
   }
 
+  showAmount() {
+    this.isShowAmount = !this.isShowAmount;
+  }
+
   showSpinner() {
     this.spinner.show(undefined, { fullScreen: true });
     setTimeout(() => {
@@ -53,26 +59,29 @@ export class PromotionDomainComponent implements OnInit {
   }
 
   showSuccess() {
-    this.toastr.success( "Update successful", "Successfully!",  {
+    this.toastr.success("Update successful", "Successfully!", {
       timeOut: 2000,
     });
   }
 
   showSuccessFreeShipping() {
-    this.toastr.success( "Update Free shipping success", "Successfully!",  {
+    this.toastr.success("Update Free shipping success", "Successfully!", {
+      timeOut: 2000,
+    });
+  }
+  showSuccessPromotion() {
+    this.toastr.success("Update promotion success", "Successfully!", {
       timeOut: 2000,
     });
   }
 
-
-
-//Modal
+  //Modal CREATE NEW PROMOTION
   isVisibleMiddle = false;
   isConfirmLoading = false;
 
-
   showModal(): void {
     this.isVisibleMiddle = true;
+
   }
 
   handleOk(): void {
@@ -87,8 +96,26 @@ export class PromotionDomainComponent implements OnInit {
     this.isVisibleMiddle = false;
   }
 
-//Date Picker
-size = 'default';
+ // Modal delete promotion
+ isVisible = false;
+  isOkLoading = false;
+
+  showModalDeletePromotion(): void {
+    this.isVisible = true;
+
+  }
+
+  handleOkDeletePromotion(): void {
+    this.isOkLoading = true;
+    setTimeout(() => {
+      this.isVisible = false;
+      this.isOkLoading = false;
+    }, 1000);
+  }
+
+  handleCancelDeletePromotion(): void {
+    this.isVisible = false;
+  }
 
   ngOnInit() {}
 }

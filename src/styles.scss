@@ -1070,11 +1070,10 @@ button:focus {
   }
 }
 .promotion-modal {
-  .ant-modal-content  {
+  .ant-modal-content {
     width: 800px;
-    top: 200px;
+    top: 130px;
     right: 140px;
-
   }
   .ant-modal-title {
     font-size: 20px;
@@ -1088,7 +1087,117 @@ button:focus {
     font-size: 22px;
   }
 }
-
+.input-group-prepend {
+  .ng-select {
+    width: 112px;
+    padding-bottom: 0;
+  }
+  .ng-dropdown-panel.ng-select-bottom {
+    margin-top: 21px !important;
+    width: 188px !important;
+  }
+  .ng-value-container {
+    padding: 0.6375em  0 !important;
+  }
+}
+.amount-input {
+  .ant-input-number-lg {
+    width: 311% !important;
+    height: 50px;
+    border-radius: 0 4px 4px 0 !important;
+  }
+  .ant-input-number-lg input {
+    height: 50px;
+  }
+  .ant-input-number-input {
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    padding-left: 22px;
+  }
+}
+.btn-submit {
+  display: flex;
+  .ant-btn-primary {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    width: 190px !important;
+    height: 50px !important;
+    font-size: 17px !important;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 20%) !important;
+    background: linear-gradient(
+      90deg,
+      #d97f0e -4.09%,
+      #ffa432 105.59%
+    ) !important;
+    border-radius: 5px !important;
+    border: none !important;
+  }
+  .ant-btn-default {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    width: 190px !important;
+    height: 50px !important;
+    font-size: 17px !important;
+    background-color: #c4c4c4;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+    border-radius: 5px !important;
+    border: none !important;
+  }
+}
+.btn-submit1 {
+  display: flex;
+  justify-content: center;
+  .ant-btn-primary {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    width: 100;
+    height: 40px !important;
+    width: 100px;
+    font-size: 14px !important;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 20%) !important;
+    border-radius: 5px !important;
+    border: none !important;
+    background-image: linear-gradient(90deg, #ed8d15 8.22%, #fdaa41 106.35%);
+  }
+  .ant-btn-default {
+    color: #212529;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    width: 100;
+    height: 40px !important;
+    width: 100px;
+    font-size: 14px !important;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 20%) !important;
+    border-radius: 5px !important;
+    background: #fff;
+    border: 1px solid #666;
+  }
+}
+.promotion-modal1 {
+  .ant-modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 4px;
+    pointer-events: auto;
+    width: 800px !important;
+    top: 332px !important;
+    right: 90px;
+  }
+  .ant-modal-body {
+    padding: 12px 0 0 24px !important;
+  }
+  .anticon {
+    display: none;
+  }
+}
+.ant-modal-footer {
+  padding: 0px 24px !important;
+  border-top: none !important;
+  border-radius: 0 0 4px 4px !important;
+  padding-bottom: 28px !important;
+}
 @keyframes lds-spinner {
   0% {
     opacity: 1;

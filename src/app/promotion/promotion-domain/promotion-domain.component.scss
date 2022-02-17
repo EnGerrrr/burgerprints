@@ -104,9 +104,7 @@
   font-size: 16px;
   text-transform: none;
 }
-.threshold-input :hover {
-  display: none;
-}
+
 .btn-add-free {
   background: #fff;
   height: 40px;
@@ -134,4 +132,18 @@
 }
 .form-control {
   border-radius: 5px;
+}
+.border-input-select {
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+}
+.button-action {
+  height: 28px;
+  width: 28px;
+  border-radius: 3px;
+  background: #fff;
+  border: none;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 20%);
+  padding-right: 20px;
+    padding-left: 10px;
 }
